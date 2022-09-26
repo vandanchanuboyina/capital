@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- CSS Reset : BEGIN -->
+<style>
+
+html,
+body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background: #F5F5F5;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+    -ms-interpolation-mode:bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+    text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+*[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links *,
+.aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+    color: inherit !important;
+}
+
+/* If the above doesn't work, add a .g-img class to any image in question. */
+img.g-img + div {
+    display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+        min-width: 320px !important;
+    }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+        min-width: 375px !important;
+    }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+        min-width: 414px !important;
+    }
+}
+
+</style>
+
+    <!-- CSS Reset : END -->
+
+    <!-- Progressive Enhancements : BEGIN -->
+<style>
+  @font-face {
+    font-family: "Avenir";
+    src: url("font/Avenir-Book.woff") format('woff');
+}
+@font-face {
+    font-family: "Avenir";
+    src: url("font/Avenir-Black.woff") format('woff');
+    font-weight: bold;
+}
+body {
+    font-family: Avenir !important;
+}
+h1{
+	font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 0px;
+  text-align: center;
+  color: #162C55;
+	margin-top: 0;  
+}
+
+table{
+}
+/*LOGO*/
+
+.logo h1{
+	margin: 0;
+}
+.logo h1 a{
+	color: #000;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/*HERO*/
+.hero{
+	position: relative;
+}
+.hero img{
+
+}
+.vol-1
+{
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  color: #162C55;
+  text-align: right;
+}
+/* crad class */
+
+.card p
+{
+    color: #FFFFFF;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+}
+.card-content p
+{
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  color: #000000;
+
+}
+
+
+/*HEADING SECTION*/
+.heading-section{
+}
+.heading-section h2
+{
+	font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #EB6F5A;
+  margin: 0px; 
+}
+
+.heading-section-2 h3{
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #E24929;
+  margin: 0px;
+}
+
+.icon img{
+}
+
+
+/*SERVICES*/
+.text-services{
+	
+	text-align: left;
+
+}
+.text-services p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 12px;
+  color: #000000;
+}
+/* other investiments */
+.new-investements p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #E24929;
+}
+/* Leadership */
+
+.Leadership h2
+{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin: 0px;
+}
+ .Leadership p
+ {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  color: #FFFFFF;
+ }
+
+  .Leadership h3
+  {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+   .investment-logos li
+   {
+    display: inline-block;
+    width: 27%;
+    margin-right: 18px;
+
+   }
+  .social-media li
+  {
+     width:20px;
+     height: auto;
+     border: 2px solid #FFFFFF;
+     padding: 4px;
+     border-radius: 50%;
+     text-align: center;
+     display: inline-block;
+     margin-right: 16px;
+     
+  }
+
+  .platform-logos li{
+    display: inline-block;
+    width: 15%;
+    margin-right: 18px;
+  }
+  .name
+  {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+   .footer-content p
+   {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 125%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0px;
+
+   }
+   .footer-content.email
+   {
+      
+      font-weight: 600;
+      font-size: 8px;
+      line-height: 125%;
+      text-align: center;
+      color: #FFFFFF;
+      margin: 0px;
+   }
+
+
+
+@media screen and (max-width: 500px) {
+
+	.icon{
+		text-align: left;
+	}
+
+	.text-services{
+		padding-left: 0;
+		padding-right: 20px;
+		text-align: left;
+	}
+
+}
+
+</style>
+
+
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;">
+	<center style="width: 100%;">
+    <div style="max-width: 600px; margin: 0 auto;" class="email-container" style="background: white;">
+    	<!-- BEGIN BODY -->
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+				<tr>
+          <td valign="middle" class="hero" style="background-image: url(imgs/Group\ 4.png); background-size: cover; height:200px;">
+            <table>
+            	<tr>
+            		<td>
+            			<div class="text" style="padding: 0 3em; text-align: center;">
+            				<h1>TRIFECTA TRIBUNE</h1>
+                     <p class="vol-1">Vol 1</p>
+            			</div>
+            		</td>
+            	</tr>
+            </table>
+          </td>
+	      </tr><!-- end tr -->
+	      <tr>
+            <td class="bg_white">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td valign="middle" class="card" style="text-align:center;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#162C55; color: #ffffff;">
+                                <tr style="text-align: center;">
+                                    <td style="padding: 20px;">
+                                        <p>4200Cr. +<br>Invested so far</p>
+                                    </td>
+                                    <td style="padding: 20px;">
+                                        <p>100+<br>Investments</p>
+                                    </td>
+                                    <td style="padding: 20px;">
+                                        <p>20+<br>Unicorns</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                      </tr>
+                      <tr class="card-content">
+                        <td style="padding: 52px 69px 52px 71px; background-color: #F5F5F5;">
+                          <p>Dear Reader, </p>
+                          <p> Dear Reader, Welcome to the first issue of our newsletter! We launched Trifecta Capital 7 years ago with the aim to be lifecycle partners for startups in their financing journey and with this north star, we have supported over 100+ startups in their journey so far. We are excited to launch this newsletter with updates on the Trifecta family of startups, founders and team members. We look forward to your continued love and support.</p>
+                          <p> In the first half of FY23, we have provided venture debt to [10] leading Indian startups, across sectors and stages. Our equity fund made an investment in Arzooo, a b2b player in the consumer electronics and durables space. Trifecta’s financial advisory partnered with XX new startups providing advisory and active treasury management tools.</p>
+                        </td>
+                      </tr>
+              </table>
+            </td>
+            
+          </tr><!-- end: tr -->
+		          <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: center; padding-bottom: 63px">
+		              	<h2>Growing the Trifecta Tribe!</h2>
+                    <img src="./imgs/Line 7.png" alt="line">
+		            	</div>
+                  <div class="heading-section-2" style="text-align: left; padding-left: 68px;padding-bottom: 25px; ">
+		              	<h3>Venture Debt Investment Updates </h3>
+                    <img src="./imgs/Group 5.png" alt="line">
+		            	</div>
+		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+		            		<tr style="background-color:#F5F5F5;">
+                      <td valign="top" width="50%" style="padding-top: 17px; padding-left: 68px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                             <a href="https://trifectacapital.in/offerings/credit/"> <img src="imgs/UDaan.png" alt="" style="width:35%; max-width: 600px; height: auto; display: block;"></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                             	<p>Udaan - Enabled access to a low cost pool of capital, to sustain momentum on growth in their journey to the IPO</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="50%" style="padding-top:17px; padding-left: 68px; padding-right: 88px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <a href="https://trifectacapital.in/offerings/credit/"> <img src="imgs/Zepto.png" alt="" style="width:35%; max-width: 600px; height: auto; display: block;"></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                              <p>Enabled national expansion of Zepto by helping it build dark stores pan-India</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="top" width="50%" style="padding-top: 17px; padding-left: 68px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <a href="https://trifectacapital.in/offerings/credit/"> <img src="imgs/slice.png" alt="" style="width:35%; max-width: 600px; height: auto; display: block;"></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                             	<p>Supported expansion of user base and the corresponding growth in AUM</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>                     
+                      <td valign="top" width="50%" style="padding-top: 17px; padding-left: 68px; padding-right: 88px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="icon">
+                              <a href="https://trifectacapital.in/offerings/credit/"> <img src="imgs/Waycool.png" alt="" style="width:35%; max-width: 600px; height: auto; display: block;"></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-services">
+                              <p>Helped Waycool to vertically integrate by acquiring a company and thus improve margins
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+		            </td>
+		          </tr><!-- end: tr -->
+
+              <tr style="background:#F5F5F5;">
+                <td class=" bg_white email-section new-investements" style="padding-top:40px ;">
+                  <div class="heading-section" style="text-align: center; ">
+		              	<p>Other New Investments</p>
+		            	</div>
+                </td>
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr  style="background-color:#F5F5F5;">
+                    <td valign="top" width="33.3%" style="padding-top: 17px; padding-left: 68px;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td class="investment">
+                            <ul class="investment-logos">
+                              <li>  <a href="https://trifectacapital.in/offerings/credit/"><img src="imgs/Gigforce.png" alt="" style="width:79%; max-width: 600px; height: auto; display: block;"></a></li>
+                              <li>  <img src="imgs/Fashinza.png" alt="" style="width:70%; max-width: 600px; height: auto; display: block;"></li>
+                              <li> <img src="imgs/Chqbook.png" alt="" style="width:70%; max-width: 600px; height: auto; display: block;"></li>
+                            </ul>                        
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>                
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr  style="background-color:#F5F5F5;">
+                    <td valign="top" width="33.3%" style="padding-top: 17px; padding-left: 68px;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td class="investment">
+                            <ul class="investment-logos">
+                              <li> <img src="imgs/image 14.png" alt="" style=" max-width: 600px; height: auto; display: block;"></li>
+                              <li> <img src="imgs/IU.png" alt="" style=" max-width: 600px; height: auto; display: block;"></li>
+                              <li><img src="imgs/Logo (1).png" alt="" style="width:71%; max-width: 600px; height: auto; display: block;"></li>
+                            </ul>   
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr  style="background-color:#F5F5F5;">
+                    <td valign="top" width="33.3%" style="padding-top: 17px; padding-left: 68px;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td class="investment">
+                            <ul class="investment-logos">
+                              <li> <img src="imgs/image 6.png" alt="" style=" max-width: 600px; height: auto; display: block;"></li>
+                              <li>  <img src="imgs/image 7.png" alt="" style=" max-width: 600px; height: auto; display: block;"></li>
+                              <li> <img src="imgs/image 12.png" alt="" style=" max-width: 600px; height: auto; display: block;"></li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>               
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr  style="background-color:#F5F5F5;">
+                    <td valign="top" width="33.3%" style="padding-top: 17px; padding-left: 68px;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td class="investment" style="padding-bottom: 80px;">
+                            <ul class="investment-logos">
+                              <li><img src="imgs/image 10.png" alt="" style="max-width: 600px; height: auto; display: block;"></li>
+                              <li> <img src="imgs/FableStreet.png" alt="" style="  width:79%; max-width: 600px; height: auto; display: block;"></li>
+                              <li> <img src="imgs/image 13.png" alt="" style=" max-width: 600px; height: auto; display: block;"></li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>               
+              </tr>
+		          <tr  style="background-color:#F5F5F5;">
+		            <td class="email-section"  style="background: #F5F5F5;">
+		            	<div class="heading-section" style="text-align:left; background: #F5F5F5; padding-left: 67px;">
+		              	<h2>Growth Equity Investment Updates</h2>
+		                <img src="./imgs/Group 5.png">
+		            	</div>
+		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+		            		<tr  style="background-color:#F5F5F5;">
+                      <td valign="top" width="30%" style="padding-top:36px; padding-left: 67px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td style="padding-right: 10px;">
+                              <a href="https://trifectacapital.in/offerings/equity/"><img src="imgs/Logo (1).png" alt="" style="width: 72%; max-width: 600px; height: auto; display: block;"></a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="70%" style="padding-top:36px; padding-right: 70px; padding-bottom: 75px">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="text-services" style="text-align: left;">
+                              <p>Arzooo, a B2B platform focused on the consumer electronics and durables industry disrupting the traditional distribution ecosystem. The platform allows small retailers to compete with online channels as well as gives them the tools to deliver a best-in-class buying and owning experience for customers. The company already serves 8,000+ retailers. We are excited to support the company in its scale-up journey across India in this large consumption category. </p>
+                              <p>with this investment, the total number of portfolio companies in the equity fund has grown to 10.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+		            </td>
+		          </tr><!-- end: tr -->
+
+		          <tr style="background:#F5F5F5"; >
+		            <td class="email-section" style="padding:0; width: 100%;">
+                  <div class="heading-section" style="text-align:left; padding-left:67px; background-color: #F5F5F5;">
+		              	<h2>Financial Advisory Updates </h2>
+		                <img src="./imgs/Group 5.png">
+		            	</div>
+		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+		            		<tr  style="background-color:#F5F5F5;">
+                      <td valign="middle" width="50%">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td class="text-services" style="text-align: left; padding:0px 73px 38px 67px;">
+                            	<div class="heading-section">
+								              	<p>Through financial advisory practice we empower finance teams of startups with expert advice, customer technology and a powerful network. The flagship treasury platform has received more than Rs. 7,000Cr of capital float to be managed.</p>
+								            	</div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+		            </td>
+		          </tr><!-- end: tr -->
+				      <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: center; padding: 0 30px 17px 30px; background-color: #F5F5F5;">
+		              	<h2>New Startups on the Treasury Platform</h2>
+		            	</div>
+		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+		            		<tr  style="background-color:#F5F5F5;">
+                      <td valign="top" width="20%" style="padding-left: 58px; padding-right: 47px;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <ul class="platform-logos"  style="list-style-type:none ; margin: 0px; padding: 0px;">
+                                 <li><a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/Screenshot 2022-09-06 at 4.55 15.svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                  <li> <a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/Screenshot 2022-09-06 at 4.55 16.svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                  <li> <a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/Screenshot 2022-09-06 at 4.55 11.svg" alt="" style="width: 80%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                  <li> <a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/Screenshot 2022-09-06 at 4.55 14.svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                  <li> <a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/Screenshot 2022-09-06 at 4.55 12.svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                </ul>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+                </td>
+                </tr><!-- end: tr -->
+                <tr  style="background-color:#F5F5F5;">
+                  <td class="bg_white email-section">
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr  style="background-color:#F5F5F5;">
+                        <td valign="top" width="20%" style="padding-left: 58px; padding-right: 47px; padding-bottom: 82px;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                            <tr>
+                              <td>
+                                <ul class="platform-logos" style="list-style-type:none ; margin: 0px; padding: 0px;">
+                                   
+                                    <li> <a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/FableStreet.svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                    <li> <a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/Screenshot 2022-09-06 at 4.55 13.svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                    <li> <a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/Screenshot 2022-09-06 at 4.55 10.svg" alt="" style="width: 80%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                    <li><a href="https://trifectacapital.in/offerings/advisory/"><img src="imgs/Screenshot 2022-09-06 at 4.55 17.svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; display: block;"></a></li>
+                                
+                                </ul>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                   </tr>
+                </td>
+		          </tr><!-- end: tr -->
+		          <tr>
+		            <td class="email-section Leadership" style="background: #162C55;">
+		            	<div class="Leadership" style="text-align: center; padding: 45px 30px; background: #162C55;">
+		              	<h2>Catalysing Thought Leadership! </h2>
+		            	</div>
+		            	<table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%" class="Leadership">
+		            		<tr>
+                      <td valign="top" width="50%" style="padding:40px 22px 100px 40px; background: #162C55;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <a href="https://www.livemint.com/companies/news/electric-mobility-offers-massive-investment-opportunities-11659632110009.html"><img src="imgs/Mint Conclave.png" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; margin-bottom: 20px; display: block;"></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-testimony">
+                            	<h3 class="name">Mobility Conclave - hosted by Mint</h3>	
+                             	<p style="text-align: left;">“It’s inevitable that the EV space will grow massively in India. Actively evaluating and investing in the EV space. R&D is going to play a crucial role across different facets of the EV value chain. As India has core-strengths in software development, and EV being more dependent on software there is large potential for EV-related software innovation. Massive investment opportunities will be opened up as increasing interest from startups, OEMs, regulators and investors is observed in the EV space.” - Nilesh Kothari, Managing Partner Trifecta Capital</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td valign="top" width="50%" style="padding:40px 40px 145px 22px; background: #162C55;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                          <tr>
+                            <td>
+                              <a href="https://twitter.com/TrifectaCap/status/1546410234670829568?s=20&t=h2J2DixeMcKk8a3F44__bQ"><img src="imgs/BWB.png" alt="" style="width: 100%; max-width: 600px;height:100%; object-fit: cover; margin: auto; margin-bottom: 20px; display: block;"></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="text-testimony">
+                            	<h3 class="name">Brunch With Builders - hosted by Trifecta <br> Capital</h3>
+                              <p style="text-align: left;">“There will be phases in the company life without capital. And then phases with a lot of capital. Latter is time to be more aggressive and opportunistic. Or it would be a disservice to the company. Adapt to the market scenario and alter strategy basis the cost of capital. If you are conservative when the cost of capital is low, someone will come and take away market share.” - Vidit Atrey, Founder & CEO Meesho</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+		            	</table>
+		            </td>
+		          </tr> <!-- end: tr -->
+		        </table>
+		      </td>
+		    </tr><!-- end:tr -->
+      <!-- 1 Column Text + Button : END -->
+      </table>
+      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      	<tr>
+          <td>
+            <tr>
+              <td class="email-section Playlist" style="background:#EB6F5A; padding-top: 50px; padding-left: 76px; padding-right: 93px; padding-bottom: 70px;">
+                <div class="Leadership" style="text-align: center; padding-bottom:50px;" >
+                  <h2>From Trifecta’s Playlist</h2>
+                </div>
+                <table role="presentation" border="0" cellpadding="10" cellspacing="0" width="100%" class="Leadership">
+                  <tr>
+                    <td valign="top" width="50%" style="padding-top: 20px;padding-right: 20px; background:#EB6F5A;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td>
+                           <a href="https://www.youtube.com/watch?v=noHXRxAvRCk&t=241s"> <img src="imgs/Screenshot 2022-09-06 at 5.00.svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; margin-bottom: 20px; display: block;"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="Leadership" style="text-align: center;">
+                            <span class="name">Shashank Mehta, The Whole Truth</span>	
+                             <p style="text-align: left;">Shashank Mehta, founder of The Whole Truth gives us a play by play rundown on what it takes to build a consumer brand from scratch, while in conversation with Rajat Agarwal, MD, Matrix India.</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td valign="top" width="50%" style="padding-top: 20px; padding-left: 20px; background:#EB6F5A;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td>
+                            <a href="https://www.youtube.com/watch?v=7KdPwYK_xwU&t=424s"><img src="imgs/Screenshot 2022-09-06 at 5.00 (1).svg" alt="" style="width: 100%; max-width: 600px; height: auto; margin: auto; margin-bottom: 20px; display: block;"></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="Leadership" style="text-align: center;">
+                            <span class="name">Alakh Pandey, Physics Wallah</span>
+                            <p style="text-align: left;">Alakh Pandey, founder of Physics Wallah opens up on his struggles, his outsized dreams, and how he set about chasing his destiny in conversation with Shradha Sharma, YourStory.</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <tr class="footer-content">
+                    <td  style="padding: 78px 44px 50px 44px; background:#EB6F5A; text-align: center; ">
+                      <table>
+                        <tr>
+                          <td class="footer-email">
+                            <p>Our mailing address is: </p>
+                            <a href="https://trifectacapital.in/"><p class="email">info@trifectacapital.in </p></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="footer-text" style="padding-top: 20px;">
+                            <p>Want to change how you receive these emails? <br>You can update your preferences or unsubscribe from this list. </p>
+                          </td>
+                        </tr>
+                        <tr class="emailus" >
+                          <td style="padding-top:20px ;">
+                            <p>Website </p>
+                            <p class="link"><a href="mailto: info@trifectacapital.in " style="color: white; text-decoration-line: underline;">trifectacapital.in</a></p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                </tr>
+                <tr>
+                  <td valign="top" style="padding-top: 20px; background:#EB6F5A;" class="social-media">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td style="background:#EB6F5A; text-align: center;">
+                          <ul style="list-style-type: none; padding:0px;">
+                            <li><a href="#"><img src="./imgs/image 4.png" alt="twitter"></a></li>   
+                            <li><a href="#"><img src="./imgs/image 5.png" alt="linkedin"></a></li>  
+                            <li><a href="#"><img src="./imgs/link-icon-png-6 1.png" alt="link"></a></li>                     
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                   
+                </tr>
+               
+              </td>
+            </tr>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </center>
+</body>
+</html>
